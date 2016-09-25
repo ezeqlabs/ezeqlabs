@@ -1,0 +1,29 @@
+*{
+  padding:0px;
+  margin:0px;
+  border:0px;
+}
+
+ul, ul li{
+  list-style-type:none;
+}
+
+body{
+  background:#E0EEEE;
+  position:relative;
+}
+
+#logoTelaInicial{
+  width:549px;
+  height:92px;
+  position:absolute;
+  margin:20% 0 0 50%;
+  top:0;
+  left:-274px;
+}
+
+#logoTelaInicial span{
+  float:right;
+  font-size:22px;
+  font-family: Open Sans,sans-serif;
+}
