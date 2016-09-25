@@ -4,11 +4,34 @@
     <meta charset="utf-8">
     <title>EzeqLabs - Desenvolvimento Mobile</title>
     <link rel="stylesheet" type="text/css" href="css/site.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body>
-    <h1 id="logoTelaInicial">
-      <img src="css/imagens/ezeqlabs.png" alt="EzeqLabs - Desenvolvimento Mobile" />
-      <span>Desenvolvimento Mobile</span>
-    </h1>
+    <div id="logoTelaInicial">
+      <h1>
+        <img src="css/imagens/ezeqlabs.png" alt="EzeqLabs - Desenvolvimento Mobile" />
+        <span>Desenvolvimento Mobile</span>
+      </h1>
+      <a href="javascript:void(0);" id="entreContato">Entre em contato</a>
+    </div>
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">x</span>
+        <p>Entre em contato e conte-nos suas idéias</p>
+        <form class="formModal">
+          <input type="text" id="campoNome" placeholder="Nome" />
+          <input type="text" id="campoEmail" placeholder="Email" />
+          <textarea rows="1" cols="1" id="campoMensagem" placeholder="Mensagem"></textarea>
+        </form>
+        <a href="javascript:void(0);" id="btForm">Enviar</a>
+      </div>
+
+    </div>
+
   </body>
 </html>
