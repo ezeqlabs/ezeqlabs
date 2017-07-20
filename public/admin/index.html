@@ -5,49 +5,40 @@
     <title>Painel Administrativo EzeqLabs</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/admin.css">
     <meta name="robots" content="noindex, nofollow">
   </head>
-  <body>
-    <div class="container">
-      <div class="card">
-        <div class="card-header text-center">
-          <h1>Painel Administrativo EzeqLabs</h1>
-        </div>
-        <div class="card-block">
 
-          <div id="erroLogin" class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Oooops!</strong> Usuário ou senha inválidos.
-          </div>
+  <body ng-app="appAdminEzeqlabs">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#/"><img style="width:190px" src="../css/imagens/ezeqlabs.png" alt="EzeqLabs" /></a>
 
-          <h4 class="card-title">Login</h4>
-          <form id="loginAdmin">
-            <div class="form-group">
-              <input type="text" name="email" id="campoEmailLogin" class="form-control" placeholder="Email" />
-            </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a href="#/dashboard" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="#/contatos" class="nav-link">Contatos</a></li>
+        </ul>
 
-            <div class="form-group">
-              <input type="password" name="email" id="campoSenhaLogin" class="form-control" placeholder="Senha" />
-            </div>
-
-            <div class="form-group">
-              <button class="btn btn-primary">Entrar</button>
-            </div>
-          </form>
-
-        </div>
+        <a href="javascript:void(0);" id="sairAdmin" class="btn btn-outline-danger my-2 my-sm-0">Sair</a>
       </div>
+    </nav>
 
-    </div>
+    <section class="container">
+      <div ng-view></div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <!-- FIREBASE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
     <script src="../js/firebase.js"></script>
-    <script src="js/firebase_functions.js"></script>
+    <script src="js/firebase_admin.js"></script>
     <script src="js/admin.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/contatos.js"></script>
   </body>
 </html>
