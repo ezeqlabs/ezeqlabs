@@ -24,11 +24,9 @@ function criaContato(nome, email, mensagem){
   var timeStamp = data.getTime()
 
   ref.push({
-    [timeStamp]: {
-      "nome": nome,
-      "email": email,
-      "mensagem": mensagem,
-      "data": dataAtual
-    }
+    "nome": nome,
+    "email": email,
+    "mensagem": mensagem,
+    "data": dataAtual
   });
 }
