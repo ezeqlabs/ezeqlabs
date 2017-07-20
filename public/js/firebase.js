@@ -16,17 +16,29 @@ firebase.initializeApp(config);
 function criaContato(nome, email, mensagem){
   var db = firebase.database();
   var ref = db.ref("contatos");
-  var data = new Date();
-  var dia = data.getDate();
-  var mes = data.getMonth();
-  var ano = data.getFullYear();
-  var dataAtual = ano+"-"+(mes+1)+"-"+dia;
-  var timeStamp = data.getTime()
 
   ref.push({
     "nome": nome,
     "email": email,
     "mensagem": mensagem,
-    "data": dataAtual
+    "data": dataAtual()
   });
+}
+
+function dataAtual(){
+  var data = new Date();
+  var dia = data.getDate();
+  var mes = data.getMonth();
+  var ano = data.getFullYear();
+  return dia + "/" + mesCorreto(mes) + "/" + ano;
+}
+
+function mesCorreto(mes){
+  var _mes = mes + 1;
+
+  if( _mes < 10 ){
+    return "0" + _mes;
+  }
+
+  return _mes;
 }
