@@ -1,4 +1,4 @@
-var app = angular.module('appAdminEzeqlabs', ['ngRoute']);
+var app = angular.module('appAdminEzeqlabs', ['ngRoute', 'firebase']);
 
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
@@ -13,7 +13,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     })
     .otherwise({redirectTo: '/'})
 }])
-.controller('Contatos', [function () {
-  var self = this;
-  self.listaContatos = contatos.todosContatos();
+.controller('Contatos', ["$scope", "$firebaseArray",
+  function($scope, $firebaseArray) {
+    var contatos = firebase.database().ref().child('contatos');
+    $scope.contatos = $firebaseArray(contatos)
 }])
