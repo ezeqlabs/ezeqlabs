@@ -14,11 +14,11 @@ app.config(["$routeProvider", function($routeProvider){
   $routeProvider
     .when('/', {
       controller: "Login",
-      templateUrl: "login.html"
+      templateUrl: "views/login.html"
     })
     .when('/dashboard', {
       controller: "Dashboard",
-      templateUrl: "dashboard.html",
+      templateUrl: "views/dashboard.html",
       resolve: {
         "currentAuth": ["Auth", function(Auth) {
           return Auth.$requireSignIn();
@@ -27,7 +27,7 @@ app.config(["$routeProvider", function($routeProvider){
     })
     .when('/contatos', {
       controller: "Contatos",
-      templateUrl: "contatos.html",
+      templateUrl: "views/contatos.html",
       resolve: {
         "currentAuth": ["Auth", function(Auth) {
           return Auth.$requireSignIn();
