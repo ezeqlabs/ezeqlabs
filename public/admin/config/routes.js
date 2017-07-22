@@ -4,6 +4,10 @@ app.config(["$routeProvider", function($routeProvider){
       controller: "Login",
       templateUrl: "views/login.html"
     })
+    .when('/sair', {
+      controller: "Logout",
+      templateUrl: "views/logout.html"
+    })
     .when('/dashboard', {
       controller: "Dashboard",
       templateUrl: "views/dashboard.html"
