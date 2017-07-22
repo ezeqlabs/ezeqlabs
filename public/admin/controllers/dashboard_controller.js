@@ -1,7 +1,7 @@
 app.controller('Dashboard',
-  ["$scope", "currentAuth", "$location",
-    function($scope, currentAuth, $location) {
-      if( currentAuth == null ){
+  ["$scope", "$location", "Auth",
+    function($scope, $location, Auth) {
+      if( Auth.$getAuth() == null ){
         $location.path('/')
       }
     }

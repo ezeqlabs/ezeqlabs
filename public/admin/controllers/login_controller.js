@@ -1,12 +1,11 @@
 app.controller('Login',
-  ["$scope", "$location", "$firebaseAuth", "Auth",
-    function($scope, $location, $firebaseAuth, Auth){
-      // if(currentAuth != null){
-      //   $location.path("/dashboard");
-      // }
-
+  ["$scope", "$location", "Auth",
+    function($scope, $location, Auth){
+      if( Auth.$getAuth() != null ){
+        $location.path('/dashboard')
+      }
+      
       var self = this;
-      $scope.authObj = $firebaseAuth();
 
       self.submit = function(){
         var email = self.email;

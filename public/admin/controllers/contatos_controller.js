@@ -1,7 +1,7 @@
 app.controller('Contatos',
-  ["$scope", "$firebaseArray", "currentAuth", "$location",
-    function($scope, $firebaseArray, currentAuth, $location) {
-      if( currentAuth == null ){
+  ["$scope", "$firebaseArray", "$location", "Auth",
+    function($scope, $firebaseArray, $location, Auth) {
+      if( Auth.$getAuth() == null ){
         $location.path('/')
       }
 

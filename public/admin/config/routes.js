@@ -6,21 +6,11 @@ app.config(["$routeProvider", function($routeProvider){
     })
     .when('/dashboard', {
       controller: "Dashboard",
-      templateUrl: "views/dashboard.html",
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
+      templateUrl: "views/dashboard.html"
     })
     .when('/contatos', {
       controller: "Contatos",
-      templateUrl: "views/contatos.html",
-      resolve: {
-        "currentAuth": ["Auth", function(Auth) {
-          return Auth.$requireSignIn();
-        }]
-      }
+      templateUrl: "views/contatos.html"
     })
     .otherwise({redirectTo: '/'})
 }]);
