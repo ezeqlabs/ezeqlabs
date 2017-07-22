@@ -1,16 +1,20 @@
-<h1 class="mb-2 mt-2">Contatos</h1>
+<ng-include src="'includes/topo.html'"></ng-include>
 
-<div class="alert alert-warning" role="alert">
-  Nenhum contato até o momento
-</div>
+<section class="container">
+  <h1 class="mb-2 mt-2">Contatos</h1>
 
-<div class="list-group" ng-controller="Contatos">
-  <div class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="contato in contatos">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">{{ contato.nome }}</h5>
-      <small>{{ contato.data }}</small>
-    </div>
-    <p class="mb-1">{{ contato.mensagem }}</p>
-    <small>{{ contato.email }}</small>
+  <div class="alert alert-warning" role="alert">
+    Nenhum contato até o momento
   </div>
-</div>
+
+  <div class="list-group" ng-controller="Contatos">
+    <div class="list-group-item list-group-item-action flex-column align-items-start" ng-repeat="contato in contatos">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ contato.nome }}</h5>
+        <small>{{ contato.data }}</small>
+      </div>
+      <p class="mb-1">{{ contato.mensagem }}</p>
+      <small>{{ contato.email }}</small>
+    </div>
+  </div>
+</section>

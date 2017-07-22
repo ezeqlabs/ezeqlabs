@@ -1,24 +1,35 @@
-<div ng-controller="Login as l">
-  <div class="card-block">
+<section class="container">
 
-    <div ng-if="equals(true, l.error)" id="erroLogin" class="alert alert-danger alert-dismissible fade show" role="alert">
-      <strong>Oooops!</strong> Usuário ou senha inválidos.
+  <div class="card mt-4">
+    <div class="card-header text-center">
+      <img src="../css/imagens/ezeqlabs.png" alt="EzeqLabs" class="mt-2 mb-2" />
     </div>
+    <div class="card-block">
+      <div ng-controller="Login as l">
+        <div class="card-block">
 
-    <h4 class="card-title">Login</h4>
-    <form id="loginAdmin" ng-submit="l.submit()">
-      <div class="form-group">
-        <input type="text" ng-model="l.email" ng-required="true" id="campoEmailLogin" class="form-control" placeholder="Email" />
+          <div ng-if="equals(true, l.error)" id="erroLogin" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Oooops!</strong> Usuário ou senha inválidos.
+          </div>
+
+          <h4 class="card-title">Login</h4>
+          <form id="loginAdmin" ng-submit="l.submit()">
+            <div class="form-group">
+              <input type="text" ng-model="l.email" ng-required="true" id="campoEmailLogin" class="form-control" placeholder="Email" />
+            </div>
+
+            <div class="form-group">
+              <input type="password" ng-model="l.senha" ng-required="true" id="campoSenhaLogin" class="form-control" placeholder="Senha" />
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="Entrar" class="btn btn-primary"/>
+            </div>
+          </form>
+
+        </div>
       </div>
-
-      <div class="form-group">
-        <input type="password" ng-model="l.senha" ng-required="true" id="campoSenhaLogin" class="form-control" placeholder="Senha" />
-      </div>
-
-      <div class="form-group">
-        <input type="submit" value="Entrar" class="btn btn-primary"/>
-      </div>
-    </form>
-
+    </div>
   </div>
-</div>
+
+</section>
